@@ -1,0 +1,18 @@
+[project]
+name = "tutorials"
+version = "0.1.0"
+description = "Tutorials for building and Debugging AI Agents"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "jupyter",
+    "ipykernel",
+]
+
+[project.optional-dependencies]
+openai = [
+    "agentdbg[openai]",
+]
+langchain = [
+    "agentdbg[langchain]",
+]
