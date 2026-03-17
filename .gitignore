@@ -1,3 +1,8 @@
+# Local runs
+**/.agentdbg/
+*.json
+*.jsonl
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
