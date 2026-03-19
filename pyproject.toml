@@ -16,3 +16,6 @@ openai = [
 langchain = [
     "agentdbg[langchain]",
 ]
+
+[tool.uv.sources]
+agentdbg = { path = "../agentdbg", editable = true }
