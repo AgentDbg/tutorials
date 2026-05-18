@@ -2,8 +2,8 @@ from langmem import create_memory_manager
 from langmem.knowledge.extraction import ExtractedMemory, Memory
 import asyncio
 
-from agentdbg import trace  # To wrap the async function
-from agentdbg.integrations import AgentDbgLangChainCallbackHandler  # To handle errors
+from maida import trace  # To wrap the async function
+from maida.integrations import LangChainCallbackHandler  # To handle errors
 
 manager = create_memory_manager(
     "openai:gpt-5-chat",
@@ -23,7 +23,7 @@ conversation = [
     max_events=20,
 )
 async def test():
-    handler = AgentDbgLangChainCallbackHandler()
+    handler = LangChainCallbackHandler()
     config = {"callbacks": [handler]}
     # Extract memories from conversation
 

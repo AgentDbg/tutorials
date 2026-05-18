@@ -11,11 +11,11 @@ dependencies = [
 
 [project.optional-dependencies]
 openai = [
-    "agentdbg[openai]",
+    "maida-ai[openai]",
 ]
 langchain = [
-    "agentdbg[langchain]",
+    "maida-ai[langchain]",
 ]
 
 [tool.uv.sources]
-agentdbg = { path = "../agentdbg", editable = true }
+"maida-ai" = { path = "../maida", editable = true }

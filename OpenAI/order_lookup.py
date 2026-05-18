@@ -1,6 +1,6 @@
 from agents import Agent, Runner, function_tool
-import agentdbg
-from agentdbg.integrations import openai_agents
+import maida
+from maida.integrations import openai_agents
 
 @function_tool
 def lookup_order(order_id: str) -> str:
@@ -13,7 +13,7 @@ agent = Agent(
     tools=[lookup_order],
 )
 
-@agentdbg.trace(
+@maida.trace(
     name="order-loop-demo",
     stop_on_loop=True,
     stop_on_loop_min_repetitions=3,
